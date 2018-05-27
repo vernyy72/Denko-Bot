@@ -55,14 +55,117 @@ client.on('message', message => {
 
     return rand[Math.floor(Math.random()*rand.length)];
 	}
+	function chachamove() {
+		var rand = ['Everybody clap your hands',
+		'Slide to the left',
+		'Slide to the right',
+		'Take it back now y\'all',
+		'One hop this time',
+		'Right foot lets stomp',
+		'Left foot lets stomp',
+		'Cha cha real smooth',
+		'Now turn it out',
+		'To the left',
+		'Cha cha now y\'all',
+		'One hop this time, one hop this time',
+		'Right foot two stomps',
+		'Left foot two stomps',
+		'Criss cross, criss cross',
+		'Two hops this time, two hops this time',
+		'Hands on your knees, hands on your knees',
+		'How low can you go',
+		'Turn it out',
+		'Five hops this time',
+		'Right foot again',
+		'Left foot again',
+		'FREEEZE',
+		'Can you bring it to the top, one hop',
+		'Reverse (reverse)',
+		'Reverse, reverse',
+		'Cha cha now y\'all, cha cha again',
+		'Two hops two hops',
+		'Charlie brown',
+		];
+
+		return rand[Math.floor(Math.random()*rand.length)];
+	}
+	function onepiece() {
+		var rand = ['I don\'t watch movies','I get pussy anytime I want'];
+
+		return rand[Math.floor(Math.random()*rand.length)];
+	}
 	console.log('I saw a prefix');
 	if (message.content === 'jew') {
 			message.reply('Oy Vey! :^)');
 	} else
 
+	if (message.content.startsWith('uwu')) {
+		message.channel.send('(OωO)');
+	} else
+
+	if (message.content.startsWith('UwU')) {
+		message.channel.send('(oωo)');
+	} else
+
+	if (message.content.startsWith(prefix + 'reminder')) {
+		message.channel.send('https://cdn.discordapp.com/attachments/131262343513374720/450159134826823680/1519436839111.png');
+	} else
+
+	if (message.content.startsWith('OwO')) {
+		message.channel.send('(uωu)');
+	} else
+
+	if (message.content === prefix + 'rendi') {
+		message.channel.send('Is a bully!');
+	} else
+
+	if (message.content === prefix + 'celes') {
+		message.channel.send('Is also a bully!');
+	} else
+
+	if (message.content === prefix + 'petrulli') {
+		message.channel.send('Is a killjoy!');
+	} else
+
+	if (message.content === prefix + 'weebs') {
+		message.channel.send('Must burn! (´･ω･`)');
+	} else
+
+	if (message.content === prefix + 'goodnight') {
+		message.channel.send('1-2-3-4 You should really sleep some more!');
+		message.channel.send('5-6-7-8 You\'ve been staying up to late!');
+		message.channel.send('(´･ω･`)');
+	} else
+
+	if (message.content === prefix + 'bestfriends') {
+		message.channel.send('https://images-ext-1.discordapp.net/external/Zt5KgE_0Xa0zXhCp3HmFlLO9lp_QG-UhQwBRbSXZV6k/https/pbs.twimg.com/profile_images/544739462966550528/BV2SYzjf_400x400.png');
+		message.channel.send('(´･ω･`)');
+	}
+
+	if (message.content === prefix + 'kaspar') {
+		message.channel.send('Made this bot!');
+	} else
+
+	if (message.content === prefix + 'cheese') {
+		message.channel.send('*did you mean: mold?*');
+	} else
+
+	if (message.content === prefix + 'alex') {
+		message.channel.send('https://media.discordapp.net/attachments/447901523356155925/450183559152533526/Screenshot_20180506-205214.jpg');
+	} else
+
+	if (message.content.startsWith('owo')) {
+		message.channel.send('(UωU)');
+	} else
+	//WARN
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
+	//WARN
 
+	if (message.content.startsWith(`(´･ω･\`)`)) {
+		message.channel.send('Are you making fun of me? (´･ω･`)');
+	} else
+	
 	if (message.content === prefix + 'ping') {
 		message.channel.send(`\`${Date.now() - message.createdTimestamp} ms\``);
 		message.channel.send('(´･ω･`)');
@@ -70,6 +173,14 @@ client.on('message', message => {
 
 	if (message.content.startsWith(prefix + 'denko')) {
 		message.reply(denkofact());
+	} else
+
+	if (message.content.startsWith(prefix + 'chacha')) {
+		message.reply(chachamove());
+	} else
+
+	if (message.content.startsWith(prefix + 'onepiece')) {
+		message.reply(onepiece());
 	} else
 
 	if (message.content.startsWith(prefix + 'setgame')) {
