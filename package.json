@@ -1,0 +1,15 @@
+{
+  "name": "denkobot",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kaspar#3733",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.3.2",
+    "weather-js": "^2.0.0"
+  }
+}
