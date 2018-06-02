@@ -4,7 +4,7 @@ const settings = require('./settings.json');
 const weather = require('weather-js');
 
 client.on('ready',()=> {
-	console.log('Online!');
+	console.log('(´･ω･\`)');
 });
 
 var prefix = ">"
@@ -27,7 +27,7 @@ client.on('message', message => {
 		'Denko\’s smart and kind, so she was like everyone\’s role model. ',
 		'When I sat next to her in class, I often borrowed her notebooks and erasers and we became friends. We made eye contact a lot in class, too… (´･ω･`) ',
 		'I SENT 600 EMAILS BECAUSE THERE WAS A CHANCE SOMETHING HAPPENED AND I WAS WORRIED. I\’m telling the truth here, okay? ',
-		'THAT\’S JUST BEING A STALKER (\´･ω･\`) I don\’t want Denko to hate me… (\´･ω･\`) ',
+		'THAT\’S JUST BEING A STALKER (\´･ω･) I don\’t want Denko to hate me… (\´･ω･\`) ',
 		'Do you think I should bring a present? Tell me what would make girls happy… (´･ω･`) ',
 		'I went to email my brother about trying to be free tomorrow night, but he changed his address and number… (´･ω･`) ',
 		'ALSO YOU GUYS CALLING ME CREEPY AND HOPELESS ARE REALLY MAKING ME LOSE CONFIDENCE. (´･ω･`) ',
@@ -94,6 +94,16 @@ client.on('message', message => {
 
 		return rand[Math.floor(Math.random()*rand.length)];
 	}
+	function nobully() {
+		var rand = ['https://i.gyazo.com/998c792d0df76ef805f5a893f4724029.png','https://cdn.discordapp.com/attachments/447901523356155925/451108057254985760/Screenshot_3.png','https://i.gyazo.com/8ae552e4382537d1ea2566cf5093f558.png','https://i.gyazo.com/a56e3e4276d90dbaa65dde2c9c4c4f59.png','https://cdn.discordapp.com/attachments/447901523356155925/450381527306469377/rendizlovesme.png'];
+
+		return rand[Math.floor(Math.random()*rand.length)];
+	}
+	function bully() {
+		var rand = ['https://cdn.discordapp.com/attachments/447901523356155925/450000549681561620/unknown.png','https://puu.sh/Avn7K/9f68c7a6b6.png','https://cdn.discordapp.com/attachments/447901523356155925/450000716933890058/Screenshot_7.png', 'https://cdn.discordapp.com/attachments/447901523356155925/450000883057426443/Screenshot_8.png', 'https://cdn.discordapp.com/attachments/447901523356155925/450000995334881290/unknown.png', 'https://cdn.discordapp.com/attachments/447901523356155925/450001070987542529/unknown.png','https://cdn.discordapp.com/attachments/447901523356155925/450378656355713044/Screenshot_2.png','https://cdn.discordapp.com/attachments/447901523356155925/450378757002362910/Screenshot_2_2.png','https://cdn.discordapp.com/attachments/447901523356155925/450378783661228035/unknown.png','https://cdn.discordapp.com/attachments/447901523356155925/450378996593459200/Screenshot_9.png','https://cdn.discordapp.com/attachments/447901523356155925/450384175124447234/Screenshot_6.png','https://cdn.discordapp.com/attachments/447901523356155925/450382049002520576/unknown.png','https://cdn.discordapp.com/attachments/447901523356155925/450381296926064660/Screenshot_4.png','https://cdn.discordapp.com/attachments/447901523356155925/450381190378160142/unknown.png','https://images-ext-1.discordapp.net/external/zuTgynEuXZYfZ6rA34-ECt1QNk6IlxBdGXG8LpuomDY/https/image.prntscr.com/image/mDk5e7U1SyOe8QeE5av3uA.png'];
+
+		return rand[Math.floor(Math.random()*rand.length)];
+	}
 	console.log('I saw a prefix');
 	if (message.content === 'jew') {
 			message.reply('Oy Vey! :^)');
@@ -101,6 +111,10 @@ client.on('message', message => {
 
 	if (message.content.startsWith('uwu')) {
 		message.channel.send('(OωO)');
+	} else
+
+	if (message.content.startsWith('oh')) {
+		message.channel.send('ok');
 	} else
 
 	if (message.content.startsWith('UwU')) {
@@ -111,6 +125,11 @@ client.on('message', message => {
 		message.channel.send('https://cdn.discordapp.com/attachments/131262343513374720/450159134826823680/1519436839111.png');
 	} else
 
+	if (message.content.startsWith(prefix + 'ron')) {
+		message.reply('https://i.gyazo.com/b644c84d555f5bbdeead88ed32eb85d3.png');
+		message.channel.send(`Stop bullying <@294818674500698112>!`).mentions;
+	} else
+
 	if (message.content.startsWith('OwO')) {
 		message.channel.send('(uωu)');
 	} else
@@ -119,12 +138,49 @@ client.on('message', message => {
 		message.channel.send('Is a bully!');
 	} else
 
-	if (message.content === prefix + 'celes') {
-		message.channel.send('Is also a bully!');
+	if (message.content === prefix + 'anime') {
+		message.channel.send('Celes is **NOT**!');
 	} else
 
-	if (message.content === prefix + 'petrulli') {
+	if (message.content === prefix + 'thebaby') {
+		message.channel.send('Is choking.');
+	} else
+
+	if (message.content === prefix + 'wizard101') {
+		message.reply('Not worth the meme.');
+		message.channel.send('https://image.prntscr.com/image/aXimCtyoTVa2cFqgecfn_A.png');
+	} else
+
+	if (message.content === prefix + 'blake') {
+		message.channel.send('Is seizuring into the night!');
+	} else
+
+	if (message.content === prefix + 'cameron') {
+		message.channel.send('Loves protein powder!');
+	} else
+
+	if (message.content === prefix + 'chris') {
+		message.channel.send('Is a workaholic!');
+	} else
+
+	if (message.content === prefix + 'holden') {
+		message.channel.send('Is a stoner!');
+	} else
+
+	if (message.content === prefix + 'bully') {
+		message.channel.send('I don\'t condone bullying unless it makes them cry! (´･ω･\`)');
+	} else
+
+	if (message.content === prefix + 'celes') {
+		message.channel.send('Is a dirty speed buff theif.');
+	} else
+
+	if (message.content === prefix + 'mark') {
 		message.channel.send('Is a killjoy!');
+	} else
+
+	if (message.content === prefix + 'tree') {
+		message.channel.send('"It\'s because I\'m black, isn\'t it?"');
 	} else
 
 	if (message.content === prefix + 'weebs') {
@@ -143,7 +199,7 @@ client.on('message', message => {
 	}
 
 	if (message.content === prefix + 'kaspar') {
-		message.channel.send('Made this bot!');
+		message.channel.send(`Made this bot! Message him for problems! <@132969502701912064> (@Kaspar#3733)`).mentions;
 	} else
 
 	if (message.content === prefix + 'cheese') {
@@ -157,6 +213,7 @@ client.on('message', message => {
 	if (message.content.startsWith('owo')) {
 		message.channel.send('(UωU)');
 	} else
+
 	//WARN
 	if (!message.content.startsWith(prefix)) return;
 	if (message.author.bot) return;
@@ -165,7 +222,11 @@ client.on('message', message => {
 	if (message.content.startsWith(`(´･ω･\`)`)) {
 		message.channel.send('Are you making fun of me? (´･ω･`)');
 	} else
-	
+
+	if (message.content === prefix + 'help') {
+			message.reply('List of commands: uwu/owo/OwO/UwU (no prefix), (´･ω･\`) (no prefix), oh (no prefix), nagatoro, rendibully, anime, blake, holden, cameron, chris, reminder, rendi, celes, mark, weebs, goodnight, bestfriends, kaspar, cheese, alex, ping, denko, chacha, onepiece, weather, leaderboard.')
+	} else
+
 	if (message.content === prefix + 'ping') {
 		message.channel.send(`\`${Date.now() - message.createdTimestamp} ms\``);
 		message.channel.send('(´･ω･`)');
@@ -175,12 +236,25 @@ client.on('message', message => {
 		message.reply(denkofact());
 	} else
 
+	if (message.content.startsWith(prefix + 'nagatoro')) {
+		message.reply('https://cdn.discordapp.com/attachments/132974146576580608/450290563250651137/DeJf7YyWsAAK3PO.png');
+		message.channel.send('She\'s almost as cute as denko. (´･ω･`)');
+	} else
+
 	if (message.content.startsWith(prefix + 'chacha')) {
 		message.reply(chachamove());
 	} else
 
 	if (message.content.startsWith(prefix + 'onepiece')) {
 		message.reply(onepiece());
+	} else
+
+	if (message.content.startsWith(prefix + 'rendibully')) {
+		message.reply(bully());
+	} else
+
+	if (message.content.startsWith(prefix + 'rendinobully')) {
+		message.reply(nobully());
 	} else
 
 	if (message.content.startsWith(prefix + 'setgame')) {
