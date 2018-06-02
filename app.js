@@ -4,13 +4,14 @@ const settings = require('./settings.json');
 const weather = require('weather-js');
 
 client.on('ready',()=> {
-	console.log('(´･ω･\`)');
+	console.log('I\'m Ready!');
 });
 
 var prefix = ">"
 client.on('message', message => {
 	let args = message.content.split(' ').slice(1);
 	var argresult = args.join(' ');
+	if (message.author.bot) return;
 	function denkofact() {
 		var rand = ['I\’m getting depressed just thinking that Denko might be sick, or that something happened to her… (´･ω･`)',
 		'I don\’t know how to say it, but I think it might be mutual… (´･ω･`) ',
@@ -104,7 +105,6 @@ client.on('message', message => {
 
 		return rand[Math.floor(Math.random()*rand.length)];
 	}
-	console.log('I saw a prefix');
 	if (message.content === 'jew') {
 			message.reply('Oy Vey! :^)');
 	} else
@@ -117,9 +117,26 @@ client.on('message', message => {
 		message.channel.send('ok');
 	} else
 
+	if (message.content.startsWith('owo')) {
+		message.channel.send('(UωU)');
+	} else
+
 	if (message.content.startsWith('UwU')) {
 		message.channel.send('(oωo)');
 	} else
+
+	if (message.content.startsWith('OwO')) {
+		message.channel.send('(uωu)');
+	} else
+
+	if (message.content.startsWith(`(´･ω･\`)`)) {
+		message.channel.send('Are you making fun of me? (´･ω･\`)');
+	} else
+
+	//WARN
+	if (!message.content.startsWith(prefix)) return;
+	console.log('I saw a prefix!');
+	//WARN
 
 	if (message.content.startsWith(prefix + 'reminder')) {
 		message.channel.send('https://cdn.discordapp.com/attachments/131262343513374720/450159134826823680/1519436839111.png');
@@ -128,10 +145,6 @@ client.on('message', message => {
 	if (message.content.startsWith(prefix + 'ron')) {
 		message.reply('https://i.gyazo.com/b644c84d555f5bbdeead88ed32eb85d3.png');
 		message.channel.send(`Stop bullying <@294818674500698112>!`).mentions;
-	} else
-
-	if (message.content.startsWith('OwO')) {
-		message.channel.send('(uωu)');
 	} else
 
 	if (message.content === prefix + 'rendi') {
@@ -153,6 +166,7 @@ client.on('message', message => {
 
 	if (message.content === prefix + 'blake') {
 		message.channel.send('Is seizuring into the night!');
+		message.channel.send('https://puu.sh/AxXhs/c22bcfe1ac.png');
 	} else
 
 	if (message.content === prefix + 'cameron') {
@@ -210,26 +224,69 @@ client.on('message', message => {
 		message.channel.send('https://media.discordapp.net/attachments/447901523356155925/450183559152533526/Screenshot_20180506-205214.jpg');
 	} else
 
-	if (message.content.startsWith('owo')) {
-		message.channel.send('(UωU)');
-	} else
-
-	//WARN
-	if (!message.content.startsWith(prefix)) return;
-	if (message.author.bot) return;
-	//WARN
-
-	if (message.content.startsWith(`(´･ω･\`)`)) {
-		message.channel.send('Are you making fun of me? (´･ω･`)');
-	} else
-
-	if (message.content === prefix + 'help') {
-			message.reply('List of commands: uwu/owo/OwO/UwU (no prefix), (´･ω･\`) (no prefix), oh (no prefix), nagatoro, rendibully, anime, blake, holden, cameron, chris, reminder, rendi, celes, mark, weebs, goodnight, bestfriends, kaspar, cheese, alex, ping, denko, chacha, onepiece, weather, leaderboard.')
+	if (message.content.startsWith(prefix + 'help')) {
+		if (message.content === prefix + 'help') {
+			const embed = new Discord.RichEmbed()
+				.setDescription("------------")
+				.setAuthor('Helpful Command List.')
+				.setColor(0x10FF00)
+				.addField('>help 1','Unorganized (for now)')
+				.addField('>help 2','Unorganized (for now)')
+			message.channel.send({embed});
+		}
+		if (message.content === prefix + 'help 1') {
+			const embed = new Discord.RichEmbed()
+				.setDescription("Every Command!")
+				.setAuthor('Helpful Command List.')
+				.setColor(0x10FF00)
+				.addField('jew','Requires no prefix!')
+				.addField('owo/OwO/uwu/UwU','Requires no prefix!')
+				.addField('(´･ω･\`)','Requires no prefix!')
+				.addField('oh','Requires no prefix!')
+				.addField('reminder','-')
+				.addField('ron','-')
+				.addField('rendi','-')
+				.addField('anime','-')
+				.addField('thebaby','-')
+				.addField('wizard101','-')
+				.addField('blake','-')
+				.addField('cameron','-')
+				.addField('chris','-')
+				.addField('holden','-')
+				.addField('bully','-')
+				.addField('celes','-')
+				.addField('mark','-')
+				.addField('tree','-')
+				.addField('weebs','-')
+				.addField('goodnight','-')
+				.addField('bestfriends','-')
+			message.channel.send({embed});
+		}
+		if (message.content === prefix + 'help 2') {
+			const embed = new Discord.RichEmbed()
+				.setDescription("Every Command!")
+				.setAuthor('Helpful Command List.')
+				.setColor(0x10FF00)
+				.addField('kaspar','-')
+				.addField('cheese','-')
+				.addField('alex','-')
+				.addField('ping','-')
+				.addField('denko','-')
+				.addField('nagatoro','-')
+				.addField('chacha','-')
+				.addField('onepiece','-')
+				.addField('rendibully','-')
+				.addField('setgame','-')
+				.addField('setstatus','-')
+				.addField('weather','-')
+				.addField('leaderboard','-')
+			message.channel.send({embed});
+		}
 	} else
 
 	if (message.content === prefix + 'ping') {
 		message.channel.send(`\`${Date.now() - message.createdTimestamp} ms\``);
-		message.channel.send('(´･ω･`)');
+		message.channel.send('(´･ω･`) ...');
 	} else
 
 	if (message.content.startsWith(prefix + 'denko')) {
@@ -476,4 +533,15 @@ client.on('message', message => {
 	}
 });
 
+client.on('guildDelete', guild => {
+	console.log(`${guild.name} kicked me out at ${new Date()}!`);
+});
+
+client.on('guildCreate', guild => {
+	console.log(`${guild.name} invited me at ${new Date()}!`);
+});
+
+// client.on('', => {});
+// client.on('','' => {});
+// (´･ω･\`)
 client.login(settings.token);
